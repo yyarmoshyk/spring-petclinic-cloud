@@ -59,5 +59,8 @@ spec:
         ports:
         - containerPort: 8080
         resources: {}
+      imagePullSecrets:
+        - name: regcred
       restartPolicy: Always
+
 status: {}
