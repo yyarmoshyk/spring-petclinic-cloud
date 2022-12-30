@@ -16,6 +16,9 @@ spec:
     metadata:
       labels:
         app: api-gateway
+      annotations:
+        sidecar.opentelemetry.io/inject: "true"
+        instrumentation.opentelemetry.io/inject-java: "true"
     spec:
       containers:
       - image: ${REPOSITORY_PREFIX}/spring-petclinic-cloud-api-gateway:latest
