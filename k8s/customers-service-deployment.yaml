@@ -17,6 +17,9 @@ spec:
     metadata:
       labels:
         app: customers-service
+      annotations:
+        sidecar.opentelemetry.io/inject: "true"
+        instrumentation.opentelemetry.io/inject-java: "true"
     spec:
       containers:
       - image: ${REPOSITORY_PREFIX}/spring-petclinic-cloud-customers-service:latest
